@@ -43,7 +43,6 @@ const PomodoroTimer = () => {
     return () => clearInterval(timer);
   }, [isRunning]);
 
-  // Play sound when timer ends
   useEffect(() => {
     if (timeLeft === 0) {
       audioRef.current?.play().catch((err) => {
